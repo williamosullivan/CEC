@@ -33,13 +33,17 @@
             <table class="table">
                 <tr>
                     <th>Order ID</th>
+                    <th>Order Date</th>
+                    <th>Ship</th>
                 </tr>
                 @foreach (var item in Model.Orders)
                 {
-
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.OrderID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderDate)
                         </td>
                     </tr>
                 }

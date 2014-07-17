@@ -14,7 +14,7 @@ namespace CEC.Models
         public DateTime OrderDate { get; set; }
         public int CustomerID { get; set; }
 
-        public virtual OrderDetail Detail { get; set; }
+        public virtual ICollection<OrderDetail> Detail { get; set; }
         public virtual Customer Customer { get; set; }
     }
 }

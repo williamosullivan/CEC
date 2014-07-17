@@ -11,7 +11,8 @@ namespace CEC.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(CEC.DAL.CompanyContext context)
@@ -44,11 +45,11 @@ namespace CEC.Migrations
 
             var orderDetails = new List<OrderDetail>
             {
-                new OrderDetail{ OrderDetailID = 145621, CustomerID = 001, ShipID = 427, Quantity = 12 },
-                new OrderDetail{ OrderDetailID = 144566, CustomerID = 002, ShipID = 452, Quantity = 14 },
-                new OrderDetail{ OrderDetailID = 154784, CustomerID = 003, ShipID = 485, Quantity = 22 },
-                new OrderDetail{ OrderDetailID = 146544, CustomerID = 004, ShipID = 452, Quantity = 3 },
-                new OrderDetail{ OrderDetailID = 184645, CustomerID = 005, ShipID = 427, Quantity = 37 }
+                new OrderDetail{ OrderDetailID = 145621, OrderID = 164545, ShipID = 427, Quantity = 12 },
+                new OrderDetail{ OrderDetailID = 144566, OrderID = 156655, ShipID = 452, Quantity = 14 },
+                new OrderDetail{ OrderDetailID = 154784, OrderID = 145784, ShipID = 485, Quantity = 22 },
+                new OrderDetail{ OrderDetailID = 146544, OrderID = 145624, ShipID = 452, Quantity = 3 },
+                new OrderDetail{ OrderDetailID = 184645, OrderID = 164545, ShipID = 427, Quantity = 37 }
             };
             orderDetails.ForEach(s => context.OrderDetails.AddOrUpdate(p => p.OrderDetailID, s));
             context.SaveChanges();
