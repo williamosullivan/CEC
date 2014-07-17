@@ -12,6 +12,7 @@ namespace CEC.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderID { get; set; }
         public DateTime OrderDate { get; set; }
+        public int CustomerID { get; set; }
 
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
