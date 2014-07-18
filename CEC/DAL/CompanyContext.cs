@@ -5,7 +5,7 @@ using System.Web;
 using CEC.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-
+using System.Data.Entity.SqlServer;
 namespace CEC.DAL
 {
     public class CompanyContext : DbContext

@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using CEC.DAL;
 using CEC.Models;
+using System.Data.Entity.Infrastructure;
 
 namespace CEC.Controllers
 {
